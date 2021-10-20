@@ -1,0 +1,38 @@
+diff --git a/node_modules/@gegeweb/leaflet-routing-machine-openroute/src/leaflet-routing-openroute.js b/node_modules/@gegeweb/leaflet-routing-machine-openroute/src/leaflet-routing-openroute.js
+index eaa2c29..a8c1099 100644
+--- a/node_modules/@gegeweb/leaflet-routing-machine-openroute/src/leaflet-routing-openroute.js
++++ b/node_modules/@gegeweb/leaflet-routing-machine-openroute/src/leaflet-routing-openroute.js
+@@ -63,7 +63,7 @@
+ 					"avgspeed",
+ 					"percentage"
+ 				],
+-				"language": "fr-fr",
++				"language": "en",
+ 				"maneuvers": "true",
+ 				"preference": "recommended",
+ 			}
+@@ -280,7 +280,8 @@
+ 						instructions.push({
+ 							idseg: ids + 1,
+ 							distance: step.distance,
+-							time: (step.distance / speed) * multi, // overide step.duration
++							//time: (step.distance / speed) * multi, // overide step.duration
++							time: step.duration,
+ 							road: step.name === '-' ? '' : step.name,
+ 							text: step.instruction || null,
+ 							icon: this._typeToIcon(step.type, arrive, startseg),
+@@ -297,11 +298,12 @@
+ 					});
+ 				});
+ 				alts.push({
+-					name: 'Initinéraire',
++					name: 'Itinerary',
+ 					coordinates: coordinates,
+ 					instructions: instructions,
+ 					summary: {
+-						totalTime: (summary.distance / speed) * multi, // overide summary.duration
++						//totalTime: (summary.distance / speed) * multi, // overide summary.duration
++						totalTime: summary.duration,
+ 						totalDistance: summary.distance,
+ 						totalAscend: isgeoJSON ? route.properties.ascent : summary.ascent,
+ 						totalDescend: isgeoJSON ? route.properties.descent : summary.descent

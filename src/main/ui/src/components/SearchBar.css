@@ -1,0 +1,156 @@
+/*
+Set font
+*/
+.search {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+Search bar field
+*/
+.searchInputs {
+	display: flex;
+}
+
+/*
+Input text padding from left
+*/
+.searchInputs input {
+	color: black;
+	font-weight: bold;
+}
+
+/*
+Search input field
+*/
+.search input {
+	background-color: white;
+	border-radius: 10px 0px 0px 10px;
+  	border: 2px solid #73AD21;
+	border-right: 0;
+	text-indent: 10px;
+	font-size: 22px;
+	height: 40px;
+	width: 300px;
+}
+
+/*
+Placeholder text style
+*/
+::placeholder {
+	font-style: italic;
+} 
+
+/*
+Search bar icon field
+*/
+.searchIcon {
+	height: 40px;
+	width: 50px;
+	background-color: white;
+	border-radius: 0px 10px 10px 0px;
+  	border: 2px solid #73AD21;
+	border-left: 0;
+	display: grid;
+	place-items: center;
+}
+
+/*
+Input field on focus
+*/
+input:focus {
+	outline: none;
+}
+
+/*
+Search bar close icon
+*/
+.Close-Icon {
+    height: 16px;
+}
+
+/*
+Search bar position icon
+*/
+.Position-Icon {
+	height: 16px;
+}
+
+/*
+Data result field
+*/
+.dataResult {
+	position: absolute;
+	width: 350px;
+	height: 200px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	overflow: hidden;
+	overflow-y: auto;
+	border-radius: 10px;
+  	border: 2px solid white;
+	z-index: 2;
+}
+
+/*
+Scrollbar in data result field
+*/
+.dataResult::-webkit-scrollbar {
+	display: none;
+}
+
+/*
+Data result items
+*/
+.dataResult .dataItem {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	color: black;
+}
+
+/*
+Data result text
+*/
+.dataItem p {
+	margin-left: 10px;
+	color: black;
+	font-weight: bold;
+}
+
+/*
+Remove "button look" from data item
+*/
+.dataItem {
+	text-decoration: none;
+	background-color: transparent;
+	outline: none;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-width: 0.5px;
+	border-color: #ebebeb8e;
+}
+
+/*
+Hover over data result items
+*/
+button:hover {
+	background-color: lightgrey;
+	border: 1px solid darkgray;
+}
+
+/*
+Hover over picture without background lighting up
+*/
+.Link:hover {
+	background-color: transparent;
+}
+
+/*
+Clear button cursor
+*/
+#clearBtn {
+	cursor: pointer;
+}

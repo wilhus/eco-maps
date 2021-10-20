@@ -1,0 +1,82 @@
+/*
+	Sets styling of the whole body for the HomePage. Background etc.
+*/
+.Home-Body {
+    background: linear-gradient(-45deg,  #49ad35, #9CDD96 , #6bbd5a, #365335 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/*had to change height to 100% to keep container responsive */
+    height: 100%;
+	display: flex;
+  	align-items: center;
+  	flex-direction: column;
+	overflow: auto;
+}
+
+/*
+	Controls the gradient background effect.
+*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*
+	CSS for all text in the home page
+*/
+.Text {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 150%;
+	font-weight: bolder;
+}
+
+/*
+	Styling the white box containing search functions
+*/
+.SearchBox{
+	margin-top: 10vh;
+	padding: 5%;
+	border-radius: 20px;
+	background-color: white;
+
+}
+
+/*
+	Adding space between all content inside the white box 
+	(seacrhfield "from", "to" and the searchbutton), 
+*/
+.SearchBox .cont{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*
+	Styling the searchbutton
+*/
+.SearchButton{
+	width: 350px;
+	padding: 2%;
+	border: none;
+	border-radius: 10px;
+	background-color: #6bbd5a;
+	color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight:bolder;
+}
+
+/*
+	Style for when hovering over the searchbutton, 
+	border is default for type <button>, hence the "border: none"
+*/
+.SearchButton:hover{
+	background-color: #49ad35;
+	border: none;
+}

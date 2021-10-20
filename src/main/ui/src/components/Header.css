@@ -1,0 +1,35 @@
+/*Overall design of the header */
+.Header {
+    background-color: white;
+    overflow: auto;
+    flex-shrink: 0;
+
+}
+
+/*Attributes for the logo in the header */
+.EcoMaps-Logo {
+    float: left;
+    object-fit: contain;
+}
+.EcoMaps-Logo img{
+    width: 180px;
+    height:auto;
+}
+
+/*Attributes for the weather in the header*/
+.Widget {
+    float: right;
+    width: 420px;
+}
+
+/* Changing the layout of footer is smaller than 400px. (Mobile device) */
+@media(max-width: 800px){
+    .EcoMaps-Logo img{
+        width: 150px;
+        height:auto;
+    }
+    .Widget {
+        display: none;
+    }
+    
+}

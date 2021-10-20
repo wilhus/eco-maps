@@ -1,0 +1,241 @@
+#map {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+/* 
+".result-Body" Controls the functions of the Result table
+*/
+
+.result-Body {
+  background: linear-gradient(-45deg,  #49ad35, #9CDD96 , #6bbd5a, #365335 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*
+	Controls the gradient background effect.
+*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*
+The following CSS controls the two searchbars (s-B1, s-B2). They are placed in a seperate div ("searchBarHolder") in order to place them above the result table. 
+*/
+
+.searchBarHolderResult {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 1ch;
+  justify-content: center;
+  height: 100px;
+}
+
+.s-B1 {
+  padding: 2ch;
+}
+
+.s-B2 {
+  padding: 2ch;
+}
+
+/*
+  CSS ahead sets the design of the "Search!" button, still inside of the "searchBarHolder" div.
+*/
+
+.search-ButtonResults {
+  margin-top: 1.3ch;
+  width: 5ch;
+  height: min-content;
+  border-radius: 10px;
+  font-size: 2.5ch;
+  background-color: #6bbd5a;
+  border: 1px solid white;
+}
+
+/*
+  CSS ahead sets the design of when hovering over the "Search!" button.
+*/
+
+.search-Button:hover {
+  background-color: #49ad35;
+  border: none;
+}
+
+/*
+"#result-outer" Controls the padding around the table
+*/
+
+.result-Outer {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+/* 
+  "#result-Table" The design of the result table
+*/
+
+.result-Table {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+	font-size: 150%;
+	font-weight: bolder;
+  width: 100%;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/*
+ Table Header CSS ahead.
+*/
+
+.result-Table th, .result-Table th:hover {
+  background-color: white;
+  border: 1px solid gray;
+  border-top: 0;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.result-Table th:first-child {
+  border-left: 0;
+  border-top-left-radius: 20px;
+}
+
+.result-Table th:last-child {
+  border-right: 0;
+  border-top-right-radius: 20px;
+}
+
+/*
+   Table row ahead
+*/
+
+.result-Table tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/*
+  The following CSS controls the design for the table data (td)
+*/
+
+.result-Table td {
+  border: 1px solid gray;
+  border-bottom: 0;
+}
+
+.result-Table td:first-child {
+  border-left: 0;
+}
+
+.result-Table td:last-child {
+  border-right: 0;
+}
+
+/*
+  The following CSS sets the corners of the table to rounded.
+*/
+
+.result-Table tr :first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+
+.result-Table tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+
+.result-Table tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+.result-Table tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+/* 
+  Styling when the screen is larger than 1440px 
+*/
+@media screen and (min-width: 1440px) {
+
+  /*
+	  On large screens a margin between header and content is added for eyepleasure.
+  */
+  #result-Outer {
+    margin-top: 5ch;
+  } 
+}
+
+/* 
+  Styling when the screen is smaller than 1440px 
+*/
+@media screen and (max-width: 1440px) {
+
+  /*
+	  Minimizing icons on smaller screens.
+  */  
+  .result-Table tr td img{
+    height: 80px;
+  } 
+}
+
+/* 
+  Styling when the screen is smaller than 900px 
+*/
+@media screen and (max-width: 1100px) {
+  /*
+	  Minimizing icons on smaller screens.
+  */ 
+  .result-Table tr td img{
+    height: 50px;
+  }
+
+  /*
+	  Minimizing text on smaller screens.
+  */ 
+  .result-Table{
+    font-size: 100%;
+  }
+
+  /*
+	  The following CSS compresses the search-related content on smaller screens.
+  */ 
+  .searchBarHolderResult {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1ch;
+    align-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .s-B1 {
+    padding: 0.5ch;
+    margin: auto;
+  }
+  
+  .s-B2 {
+    padding: 0.5ch;
+    margin: auto;
+  }
+  .search-ButtonResults {
+    margin-top: 0.5ch;
+    margin: auto;
+  }
+}

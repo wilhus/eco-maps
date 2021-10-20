@@ -1,0 +1,86 @@
+/*Overall design of our footer*/
+.Footer {
+    width: 100%;
+    background-color: #3B3B3B;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.Footer-Text {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+    float: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.Footer-Logo {
+    float: left;
+    object-fit: contain;
+}
+.Footer-Logo img{
+    width: 125px;
+    height:auto;
+}
+
+.Links {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    color:white;
+}
+
+.Footer-link-1, .Footer-link-2 {
+    margin-left: 0.5vw;
+    color: white;
+}
+.link-text{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+/*A lil' hover effect on the links*/
+.Footer-link-1:hover, .Footer-link-2:hover {
+    color: gray;
+}
+
+/* Changing the layout of footer is smaller than 477px. (Mobile device) */
+/* Somewhat sketchy at the moment*/
+@media(max-width: 477px){
+    .Footer {
+        width: 100%;
+        background-color: #3B3B3B;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .Links{
+        float: none;
+        margin-top: 5px;
+        margin-left: 30%;
+        margin-right: 20%;
+        color:white;
+    }
+    .Footer-link-1, .Footer-link-2{
+        align-self: center;
+
+    }
+    .Footer-Logo img{
+        width: 100px;
+        height:auto;
+    }
+    .Footer-Logo {
+        float: none;
+        margin-top: 5px;
+        margin-left: 37%;
+        margin-right: 30%;
+        object-fit: contain;
+    }
+    .Footer-Text{
+        margin-top: 5%;
+        margin-left: 30%;
+        color: white;
+        float: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+    }
+}
